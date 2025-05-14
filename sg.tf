@@ -16,7 +16,7 @@ resource "aws_vpc_security_group_ingress_rule" "allow_all_inbound" {
   cidr_ipv4         = "0.0.0.0/0"
   from_port         = 0
   to_port           = 65535
-  ip_protocol       = "-1"
+  ip_protocol       = "tcp"
 }
 
 # Outbound Rule: Allow all protocols to anywhere
