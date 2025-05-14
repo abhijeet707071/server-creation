@@ -2,7 +2,7 @@ default:
 	echo "No Action"
 
 apply:
-	rm -rf .terraform
+	#rm -rf .terraform
 	terraform init
 	terraform apply -auto-approve
 
