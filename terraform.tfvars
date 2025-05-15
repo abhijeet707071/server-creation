@@ -43,8 +43,4 @@ components = {
     instance_type = "t2.micro"
     name = "payment"
   }
-  dispatch = {
-    instance_type = "t2.micro"
-    name = "dispatch"
-  }
 }
