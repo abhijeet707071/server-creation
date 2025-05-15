@@ -21,7 +21,7 @@ resource "aws_instance" "instance" {
       type     = "ssh"
       user     = "ec2-user"
       password = var.ec2_user_password
-      host     = self.public_ip
+      host     = self.private_ip
     }
   }
 
