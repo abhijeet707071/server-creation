@@ -13,9 +13,9 @@ resource "aws_instance" "instance" {
 
   provisioner "remote-exec" {
     inline = [
-      "yum install -y git bash-completion",
-      "cd /home/ec2-user",
-      "git clone https://github.com/abhijeet707071/shell-script"
+      "sudo yum install -y git bash-completion",
+      "sudo cd /home/ec2-user",
+      "sudo git clone https://github.com/abhijeet707071/shell-script"
     ]
 
     connection {
