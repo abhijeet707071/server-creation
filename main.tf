@@ -10,6 +10,22 @@ resource "aws_instance" "instance" {
     Name    = each.value["name"]
     project = "roboshop"
   }
+
+  provisioner "remote-exec" {
+    inline = [
+      "cd /home/ec2-user",
+      "git clone https://github.com/abhijeet707071/shell-script"
+    ]
+
+    connection {
+      type     = "ssh"
+      user     = "ec2-user"
+      password = var.ec2_user_password
+      host     = self.public_ip
+    }
+  }
+
+
 }
 
 
