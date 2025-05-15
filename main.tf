@@ -13,6 +13,7 @@ resource "aws_instance" "instance" {
 
   provisioner "remote-exec" {
     inline = [
+      "yum install -y git bash-completion",
       "cd /home/ec2-user",
       "git clone https://github.com/abhijeet707071/shell-script"
     ]
@@ -24,8 +25,6 @@ resource "aws_instance" "instance" {
       host     = self.private_ip
     }
   }
-
-
 }
 
 
