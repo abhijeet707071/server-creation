@@ -15,7 +15,8 @@ resource "aws_instance" "instance" {
     inline = [
       "sudo yum install -y git bash-completion",
       "sudo cd /home/ec2-user",
-      "sudo git clone https://github.com/abhijeet707071/shell-script"
+      "sudo git clone https://github.com/abhijeet707071/shell-script",
+      "sudo git clone https://github.com/abhijeet707071/ansible"
     ]
 
     connection {
