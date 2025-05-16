@@ -13,7 +13,7 @@ resource "aws_instance" "instance" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo yum install -y git bash-completion",
+      "sudo yum install -y git bash-completion ansible",
       "sudo cd /home/ec2-user",
       "sudo git clone https://github.com/abhijeet707071/shell-script",
       "sudo git clone https://github.com/abhijeet707071/ansible"
